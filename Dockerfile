@@ -1,4 +1,7 @@
-FROM ubuntu:latest
-LABEL authors="marcel"
+FROM python:3.12-alpine
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY main.py /app
+
+CMD python main.py
